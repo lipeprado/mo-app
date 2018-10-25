@@ -6,6 +6,7 @@ import App from "./containers/App";
 import * as serviceWorker from "./serviceWorker";
 
 // Styles
+import "antd/dist/antd.css";
 import "./static/styles/_global.module.scss";
 
 // Store

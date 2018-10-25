@@ -6,18 +6,18 @@ export default function(state = initialState.posts, action) {
     case types.FETCH_POSTS_REQUEST:
       return {
         ...state,
-        isFetchingChart: true
+        isFetching: true
       };
     case types.FETCH_POSTS_SUCCESS:
       return {
         ...state,
-        isFetchingChart: false,
-        posts: action.posts
+        posts: [...state.posts, ...action.posts],
+        isFetching: false
       };
     case types.FETCH_POSTS_FAILED:
       return {
         ...state,
-        isFetchingChart: false
+        isFetching: false
       };
     default:
       return state;
