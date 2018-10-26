@@ -1,0 +1,72 @@
+@import "../../../static/styles/variables.module";
+
+.viewWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.backHome {
+  background-color: $detailsColor;
+  padding: 1rem 1.3rem;
+  display: flex;
+  float: right;
+  max-width: 200px;
+  color: $baseColor;
+  justify-content: center;
+  margin: 2rem 0;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($detailsColor, 10%);
+    color: $baseColor;
+  }
+}
+.wrapperViewPost {
+  margin: 2rem 0;
+  padding: 3rem 1rem;
+  background-color: #f0f0f077;
+  border-radius: 0.4rem;
+  border: 1px solid $strongColor;
+  &__title {
+    font-size: 2rem;
+    color: $detailsColor;
+    text-transform: capitalize;
+  }
+  &__body {
+    margin: 2rem 0;
+    color: $strongColor;
+    text-transform: capitalize;
+  }
+}
+
+.mainTitle {
+  color: $detailsColor;
+  margin: 1rem 0;
+}
+.wrapperComments {
+  background-color: #f0f0f077;
+  padding: 1.5rem 1rem;
+  position: relative;
+  margin-bottom: 1rem;
+  &::before {
+    content: "";
+    background-color: $detailsColor;
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__email {
+    background-color: $strongColor;
+    padding: 0.3rem 0.6rem;
+    color: $baseColor;
+    margin: 0.5rem 0;
+  }
+  &__name {
+    margin: 0.5rem 0;
+    color: $detailsColor;
+    font-size: 1.2rem;
+  }
+}

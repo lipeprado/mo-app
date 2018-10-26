@@ -6,7 +6,7 @@ import ClipLoading from "react-spinners/BarLoader";
 
 import styles from "./styles.module.scss";
 
-const Loading = ({ loading }) => {
+const Loading = ({ loading, message }) => {
   const override = css`
     display: block;
     margin: 0 auto;
@@ -14,20 +14,24 @@ const Loading = ({ loading }) => {
   `;
 
   return (
-    <div className={styles.wrapperLoading}>
-      <ClipLoading
-        className={override}
-        sizeUnit={"px"}
-        size={10}
-        color={"#94a5d5"}
-        loading={loading}
-      />
+    <div className={styles.postWrapper}>
+      <div className={styles.postWrapper__onLoading}>
+        <h1>{message}</h1>
+        <ClipLoading
+          className={override}
+          sizeUnit={"px"}
+          size={10}
+          color={"#94a5d5"}
+          loading={loading}
+        />
+      </div>
     </div>
   );
 };
 
 Loading.propTypes = {
-  loading: PropTypes.bool
+  loading: PropTypes.bool,
+  message: PropTypes.string
 };
 
 export default Loading;
