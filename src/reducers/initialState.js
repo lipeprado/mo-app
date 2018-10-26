@@ -1,6 +1,10 @@
 export default {
   posts: {
     isFetching: false,
-    posts: []
+    posts: [],
+    currentPost: {},
+    isFetchingById: false,
+    comments: [],
+    isFetchingComments: false
   }
 };

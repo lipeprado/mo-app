@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import PropTypes from "prop-types";
@@ -7,9 +7,11 @@ import PropTypes from "prop-types";
 import * as postActions from "../../actions/posts";
 
 // Components
-import List from "./List";
+import List from "./List/";
+import Header from "../../components/Header";
 
-// Styles import styles from "./styles.module.scss";
+// Styles
+import styles from "./styles.module.scss";
 
 class Posts extends Component {
   state = {
@@ -36,13 +38,10 @@ class Posts extends Component {
     const { isFetching, posts } = this.props;
 
     return (
-      <Fragment>
-        <List
-          isFetching={isFetching}
-          onLoadMore={this._handleLoadMore}
-          posts={posts}
-        />
-      </Fragment>
+      <div className={styles.main}>
+        <Header onClick={this._handleLoadMore} postsSize={posts.length} />
+        <List isFetching={isFetching} posts={posts} />
+      </div>
     );
   }
 }

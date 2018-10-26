@@ -1,0 +1,44 @@
+@import "../../static/styles/variables.module";
+
+.mainWrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  &__tag {
+    background-color: $strongColor;
+    padding: 0.3rem 0.6rem;
+    color: $baseColor;
+  }
+  &__loadMore {
+    background-color: $detailsColor;
+    padding: 1rem 1.3rem;
+    color: $baseColor;
+    display: flex;
+    max-width: 300px;
+    justify-content: center;
+    margin: 2rem 0;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($detailsColor, 10%);
+    }
+  }
+}
+
+.logo {
+  font-size: 30px;
+  font-family: "NunitoBold", sans-serif;
+  font-weight: bold;
+  color: $detailsColor;
+  padding-left: 1rem;
+  position: relative;
+  &::before {
+    content: "";
+    background-color: $detailsColor;
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
