@@ -1,5 +1,12 @@
 ## MO_APP
 
+## Install
+
+- npm install
+- npm run start
+
+### TODOS
+
 Create an application to display posts and comments using React.
 
 Use this fake API to load posts and comments https://jsonplaceholder.typicode.com/ [DONE]
